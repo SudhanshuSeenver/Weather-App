@@ -25,7 +25,7 @@ function dateStr(dt, timezone) {
   const time = dateTime.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: true,
+    hour12: false,
   });
 
   let date = dateTime.toLocaleDateString("en-IN", options);
