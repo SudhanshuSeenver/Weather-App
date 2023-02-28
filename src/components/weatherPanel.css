@@ -1,0 +1,141 @@
+.weather-app-panel {
+  position: relative;
+  /* max-width: 60rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* gap: 8rem; */
+  align-items: center;
+  padding: 2rem;
+  /* border-radius: 11px;
+  background-color: rgba(0, 0, 0, 0.573); */
+}
+
+.app-weather-current {
+  padding: 1rem;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+  /* transition: all 0.3s linear; */
+}
+
+.app--current-temp {
+  font-size: 7rem;
+  line-height: 1;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.app--current-timeCity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.app--current-city {
+  font-size: 3.25rem;
+}
+
+.app--current-time,
+.app--curr-desc {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.app--W-curr-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 2rem;
+}
+
+.app--W-curr-desc ion-icon {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.w-Icons {
+  /* font-size: 5rem; */
+  height: 6rem;
+  width: 6rem;
+  display: block;
+}
+
+.app--curr-desc {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ****************************** */
+/* *****  Unit Toggler  ****** */
+/* ****************************** */
+
+.toggler-container {
+  width: 4.5rem;
+
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+.toggle {
+  display: flex;
+  color: #ddd;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border: 2px solid black;
+  background-color: #333;
+  position: relative;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.toggle-action.farhenheit {
+  /* right: 5%; */
+  transform: translateX(70%);
+}
+.toggle-action.celcius {
+  left: 5%;
+}
+
+.toggle-action {
+  position: absolute;
+  width: 2rem;
+  height: 80%;
+  /* left: 5%;
+  right: 5%; */
+  border-radius: 3px;
+  /* background-color: black; */
+  /* background-color: #537fe7; */
+  background-color: #eb6e4b;
+  cursor: pointer;
+  /* transition-delay: 2s; */
+  transition: all 0.2s linear;
+}
+
+@media (max-width: 576px) {
+  .app-weather-current {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .app--current-timeCity {
+    order: 2;
+  }
+  .app--W-curr-desc {
+    margin-left: 0;
+  }
+  .toggler-container {
+    top: 1.5%;
+    left: 2%;
+  }
+  .weather-app-panel {
+    padding: 1rem;
+  }
+}

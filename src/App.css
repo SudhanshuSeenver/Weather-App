@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 0.5rem;
+
+  /* background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.158),
+      rgba(0, 0, 0, 0.068)
+    ),
+    url(./images/thunderstorm.jpg);
+  background-size: cover;
+  background-position: center; */
+}
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -100;
+}
+.bgGradient {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  z-index: -99;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.158),
+    rgba(0, 0, 0, 0.068)
+  );
+}
+.weather-container {
+  /* position: absolute; */
+  height: 40rem;
+  /* max-height: 40rem; */
+  max-width: 60rem;
+  width: 95%;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  border-radius: 11px;
+  background-color: rgba(0, 0, 0, 0.573);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-height: 750px) {
+  html {
+    font-size: 12px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .weather-container {
+    height: 80%;
   }
 }

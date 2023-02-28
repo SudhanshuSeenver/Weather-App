@@ -1,0 +1,99 @@
+.weather-current-hourly {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.weatherToday-details {
+  display: flex;
+  /* width: 100%; */
+  height: 40%;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.WT-detailSec {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.WT-det-part {
+  display: flex;
+  gap: 1rem;
+  height: 50%;
+}
+
+.WT-det-part-itm {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0);
+  padding: 0 0.5rem;
+}
+
+.PT-itm-desc {
+  /* display: flex; */
+  /* align-items: end; */
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #aaa;
+  /* justify-content: center; */
+  /* gap: 1rem; */
+}
+.PT-itm-desc > .des-val {
+  color: #ddd;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.WT-det-part-itm > .itm-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.todayHourly-details {
+  height: 55%;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+
+/* *************************** */
+/* ******  Line Chart  ******* */
+/* *************************** */
+
+.chart-canvas {
+  width: auto;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .weatherToday-details {
+    flex-direction: column;
+    height: 60%;
+  }
+  .WT-detailSec {
+    width: 90%;
+    height: 50%;
+  }
+  .todayHourly-details {
+    height: 40%;
+  }
+  .WT-det-part-itm {
+    padding: 0 1rem;
+  }
+}

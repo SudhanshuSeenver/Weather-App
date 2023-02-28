@@ -1,0 +1,143 @@
+.app--weatherForecastFiveDays {
+  position: relative;
+  width: 100%;
+  height: 14rem;
+  padding: 2rem;
+  /* background-color: rgba(34, 34, 34, 0.825); */
+  background-color: rgba(0, 0, 0, 0.028);
+  border-radius: 9px;
+  overflow: hidden;
+  /* display: grid;
+  grid-template-columns: repeat(8, 1fr); */
+  /* gap: 0.625rem; */
+}
+
+.app--weatherForecastnDay {
+  display: flex;
+  /* gap: 4rem; */
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.item {
+  flex: 1 0 100%;
+  position: absolute;
+  transform: translate(0, -50%);
+  width: 100%;
+
+  padding: 2rem;
+  /* background-color: rgba(34, 34, 34, 0.825); */
+  background-color: rgba(0, 0, 0, 0.028);
+  opacity: 0;
+  border-radius: 9px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.625rem;
+  transition: all 0.3s linear;
+}
+
+.app--small-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  /* background-color: #537fe7; */
+  padding: 0.75rem 0;
+  color: rgb(255, 255, 255);
+  border-radius: 9px;
+}
+.app--small-cards h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.app--small-cards ion-icon {
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: 0.25rem;
+}
+.FW-icons {
+  height: 2rem;
+  width: 2rem;
+  /* margin-bottom: 0.25rem; */
+}
+.forecast-date {
+  position: absolute;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 400;
+  left: 50%;
+  padding: 0.5rem;
+  background-color: #000;
+  border-radius: 7px;
+  transform: translate(-50%, -50%);
+  /* z-index: 100; */
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.left,
+.right {
+  position: absolute;
+  padding: 0.75rem;
+  background-color: rgba(207, 221, 219, 0.028);
+  /* background-color: #537fe7; */
+  top: 50%;
+  z-index: 3;
+}
+.left {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.right {
+  right: 0;
+  transform: translate(+50%, -50%);
+}
+
+.arrow-icons {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* **************** */
+/* *** Carousel *** */
+/* **************** */
+
+.item.activeSlide {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.item.prevSlide {
+  transform: translate(-110%, 0);
+}
+.item.nextSlide {
+  transform: translate(110%, 0);
+}
+
+@media (max-width: 576px) {
+  .app--weatherForecastFiveDays {
+    height: 28rem;
+  }
+  .item {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2rem 1rem;
+  }
+  .right {
+    transform: translate(70%, -50%);
+  }
+  .left {
+    transform: translate(-70%, -50%);
+  }
+}

@@ -1,0 +1,42 @@
+.app-search-bar {
+}
+.app-search-bar-form {
+  display: flex;
+  align-items: center;
+  border: 3px solid white;
+  background-color: #fff;
+  color: white;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.app-searchBar-text {
+  width: 15rem;
+  border: none;
+  padding: 0.625rem 1.5rem;
+  font-size: 1.25rem;
+  background-color: inherit;
+}
+
+.app-searchBar-text:focus {
+  outline: none;
+}
+
+.app-btn {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.app-search {
+  background-color: rgb(0, 0, 0);
+}
+
+.app-search-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+}
