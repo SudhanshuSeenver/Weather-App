@@ -13,7 +13,7 @@ const getGeoLocation = async (term) => {
     const city = term || "London";
     // console.log(city);
     const location = await axios.get(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${4}&appid=5a425483989279205af45f041220b096`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${4}&appid=5a425483989279205af45f041220b096`
     );
     // console.log(location.data);
     return location.data;
