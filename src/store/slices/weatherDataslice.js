@@ -9,6 +9,7 @@ const weatherDataSlice = createSlice({
     hourlyData: {},
     tempUnit: "celcius",
     error: null,
+    loader: false,
   },
   reducers: {
     changeTemp(state, action) {
@@ -17,7 +18,10 @@ const weatherDataSlice = createSlice({
     },
   },
   extraReducers(builder) {
-    builder.addCase(getWeatherData.pending, (state, action) => {});
+    builder.addCase(getWeatherData.pending, (state, action) => {
+      state.loader = true;
+      state.error = null;
+    });
     builder.addCase(getWeatherData.fulfilled, (state, action) => {
       const {
         weatherDataCurrent,
@@ -33,8 +37,11 @@ const weatherDataSlice = createSlice({
       };
       state.forecastData = weatherForecastData;
       state.hourlyData = weatherHourlyData;
+      state.loader = false;
     });
     builder.addCase(getWeatherData.rejected, (state, action) => {
+      state.loader = false;
+      console.log(action.error);
       state.error = action.error;
     });
   },
