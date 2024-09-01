@@ -39,9 +39,7 @@ function dateStr(dt, timezone) {
   date = date.split(",");
   // console.log(date);
 
-  const dateString = `${time} ${date[0]}, ${date[1].slice(1)} '${date[2].slice(
-    3
-  )}`;
+  const dateString = `${time} ${date[0]}, '${date[1].slice(3)}`;
   // console.log(dateString);
   return { dateString, time: time };
 }
